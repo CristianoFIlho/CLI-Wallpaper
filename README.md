@@ -1,2 +1,2 @@
-# CLI-Wallpaper
+# CLI Wallpaper
 CLI wallpaper desktop templetes
