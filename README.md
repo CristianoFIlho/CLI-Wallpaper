@@ -1,8 +1,24 @@
-# CLI Wallpaper Generator
+# 🖼️ CLI Wallpaper Generator
 
-A TypeScript-based tool that generates beautiful CLI cheat sheet wallpapers in multiple resolutions. Perfect for developers who want quick reference guides as their desktop backgrounds.
+<div align="center">
 
-## Features
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+
+**Transform CLI commands into elegant wallpapers for your desktop!**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/cli-wallpaper-generator.svg)](https://badge.fury.io/js/cli-wallpaper-generator)
+
+</div>
+
+## 🎯 What is it?
+
+A TypeScript-based tool that generates elegant wallpapers with CLI cheat sheets in multiple resolutions. Perfect for developers who want quick reference guides as their desktop backgrounds.
+
+## ✨ Features
 
 - 🎨 **Multiple CLI Tools**: Support for Git, Docker, Kubernetes, npm, and Salesforce CLI
 - 📱 **Multiple Resolutions**: Generate wallpapers in 1920x1080, 2560x1440, and 3840x2160
@@ -13,80 +29,95 @@ A TypeScript-based tool that generates beautiful CLI cheat sheet wallpapers in m
 - 📊 **Resolution Scaling**: Proper text scaling for each resolution
 - 🎭 **Playwright**: Modern browser automation for better screenshots
 
-## Installation
+## 🖼️ Gallery Examples
 
-1. Clone the repository:
+### Git Commands Wallpaper
+<div align="center">
+<img src="output/git/git-1920x1080.png" alt="Git Commands Wallpaper" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
+### Docker Commands Wallpaper
+<div align="center">
+<img src="output/docker/docker-1920x1080.png" alt="Docker Commands Wallpaper" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
+### Kubernetes Commands Wallpaper
+<div align="center">
+<img src="output/kubernetes/kubernetes-1920x1080.png" alt="Kubernetes Commands Wallpaper" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
+### npm Commands Wallpaper
+<div align="center">
+<img src="output/npm/npm-1920x1080.png" alt="npm Commands Wallpaper" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
+## 🚀 Quick Start
+
+### 1. Installation
+
 ```bash
-git clone <repository-url>
+# Clone the repository
+git clone https://github.com/your-username/CLI-Wallpaper.git
 cd CLI-Wallpaper
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Build the project:
-```bash
+# Build the project
 npm run build
 ```
 
-## Usage
+### 2. Web Interface (Recommended) 🌐
 
-### Web Interface (Recommended)
-
-Start the web server:
 ```bash
+# Start the web server
 npm run server
 ```
 
 Open your browser and navigate to `http://localhost:3000`
 
-**Features:**
-- Interactive CLI tool selection
-- Resolution picker with preview
-- Real-time wallpaper generation
-- Live preview of generated wallpapers
-- Gallery with search and filtering
-- One-click download
+**Web Interface Features:**
+- ✅ Interactive CLI tool selection
+- ✅ Resolution picker with preview
+- ✅ Real-time wallpaper generation
+- ✅ Live preview of generated wallpapers
+- ✅ Gallery with search and filtering
+- ✅ One-click download
 
-### Command Line Interface
+### 3. Command Line Interface 💻
 
-#### Generate wallpapers for a specific CLI tool:
 ```bash
+# Generate wallpapers for a specific CLI tool
 npm run generate git
 npm run generate docker
 npm run generate kubernetes
 npm run generate npm
 npm run generate salesforce
-```
 
-#### Generate wallpapers for all CLI tools:
-```bash
+# Generate wallpapers for all CLI tools
 npm run generate all
-```
 
-#### List available CLI tools:
-```bash
+# List available CLI tools
 npm run generate list
-```
 
-#### Show help:
-```bash
+# Show help
 npm run generate --help
 ```
 
-## Available CLI Tools
+## 🛠️ Available CLI Tools
 
-- **Git**: Version control commands (clone, commit, push, pull, branch, merge, etc.)
-- **Docker**: Container management (run, build, images, compose, etc.)
-- **Kubernetes**: Container orchestration (kubectl commands)
-- **npm**: Package management (install, run, publish, etc.)
-- **Salesforce**: SF CLI commands (org management, deployment, etc.)
+| Tool | Description | Commands Included |
+|------|-------------|-------------------|
+| **Git** | Version control | clone, commit, push, pull, branch, merge, etc. |
+| **Docker** | Container management | run, build, images, compose, etc. |
+| **Kubernetes** | Container orchestration | kubectl commands |
+| **npm** | Package management | install, run, publish, etc. |
+| **Salesforce** | SF CLI commands | org management, deployment, etc. |
 
-## Output
+## 📁 Output Structure
 
 Wallpapers are saved to the `./output/` directory with the following structure:
+
 ```
 output/
 ├── git/
@@ -97,18 +128,26 @@ output/
 │   ├── docker-1920x1080.png
 │   ├── docker-2560x1440.png
 │   └── docker-3840x2160.png
-└── ...
+├── kubernetes/
+│   ├── kubernetes-1920x1080.png
+│   ├── kubernetes-2560x1440.png
+│   └── kubernetes-3840x2160.png
+└── npm/
+    ├── npm-1920x1080.png
+    ├── npm-2560x1440.png
+    └── npm-3840x2160.png
 ```
 
-## Resolutions
+## 📐 Supported Resolutions
 
-- **1920x1080** (Full HD) - Most common desktop resolution
-- **2560x1440** (2K) - High-resolution displays with 1.33x scaling
-- **3840x2160** (4K) - Ultra-high-resolution displays with 2x scaling
+| Resolution | Description | Scale |
+|------------|-------------|-------|
+| **1920x1080** | Full HD | Most common desktop resolution |
+| **2560x1440** | 2K | High-resolution displays with 1.33x scaling |
+| **3840x2160** | 4K | Ultra-high-resolution displays with 2x scaling |
 
-## Development
+## 🏗️ Project Structure
 
-### Project Structure
 ```
 src/
 ├── templates/
@@ -131,10 +170,35 @@ web/
 └── app.js                     # Frontend JavaScript
 ```
 
-### Adding New CLI Tools
+## 🔧 Available Scripts
 
-1. Create a new JSON file in `src/data/` with the CLI name (e.g., `aws.json`)
-2. Follow the existing structure:
+| Script | Description |
+|--------|-------------|
+| `npm run build` | Compile TypeScript to JavaScript |
+| `npm run dev` | Run CLI in development mode with ts-node |
+| `npm run generate` | Build and run the CLI generator |
+| `npm run server` | Start Express web server |
+| `npm run dev:server` | Start server in development mode |
+| `npm start` | Start web server (alias for server) |
+| `npm run clean` | Clean build and output directories |
+
+## 🌐 API Endpoints
+
+The web server provides the following REST API endpoints:
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/clis` | GET | List available CLI tools |
+| `/api/resolutions` | GET | List available resolutions |
+| `/api/generate` | POST | Generate wallpaper on demand |
+| `/api/wallpapers` | GET | List all generated wallpapers |
+| `/api/preview/:cli/:resolution` | GET | Get preview of specific wallpaper |
+
+## ➕ Adding New CLI Tools
+
+1. **Create a new JSON file** in `src/data/` with the CLI name (e.g., `aws.json`)
+
+2. **Follow the existing structure:**
 ```json
 {
   "title": "AWS CLI",
@@ -148,29 +212,10 @@ web/
   ]
 }
 ```
-3. The tool will automatically detect the new CLI and make it available
 
-### Scripts
+3. **The tool will automatically detect** the new CLI and make it available
 
-- `npm run build` - Compile TypeScript to JavaScript
-- `npm run dev` - Run CLI in development mode with ts-node
-- `npm run generate` - Build and run the CLI generator
-- `npm run server` - Start Express web server
-- `npm run dev:server` - Start server in development mode
-- `npm start` - Start web server (alias for server)
-- `npm run clean` - Clean build and output directories
-
-## API Endpoints
-
-The web server provides the following REST API endpoints:
-
-- `GET /api/clis` - List available CLI tools
-- `GET /api/resolutions` - List available resolutions
-- `POST /api/generate` - Generate wallpaper on demand
-- `GET /api/wallpapers` - List all generated wallpapers
-- `GET /api/preview/:cli/:resolution` - Get preview of specific wallpaper
-
-## Dependencies
+## 📦 Dependencies
 
 - **TypeScript**: Type-safe JavaScript development
 - **Playwright**: Modern browser automation for screenshots
@@ -178,14 +223,24 @@ The web server provides the following REST API endpoints:
 - **CORS**: Cross-origin resource sharing
 - **Node.js**: Runtime environment
 
-## Contributing
+## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Add your CLI tool data or improvements
-4. Test your changes
-5. Submit a pull request
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch (`git checkout -b feature/new-feature`)
+3. 📝 Add CLI tool data or improvements
+4. ✅ Test your changes
+5. 📤 Submit a pull request
 
-## License
+## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+**⭐ If this project was useful to you, consider giving it a star! ⭐**
+
+Made with ❤️ for the developer community
+
+</div>
