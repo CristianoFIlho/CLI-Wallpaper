@@ -1,0 +1,11 @@
+node_modules
+dist
+src/server.ts
+*.md
+.git
+.gitignore
+tsconfig.json
+package-lock.json
+test-screenshot.png
+generated-wallpaper-test.png
+cursor_*.md
