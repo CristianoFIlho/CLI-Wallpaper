@@ -1,8 +1,8 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import cors from 'cors';
 import path from 'path';
-import { WallpaperGenerator } from './generator';
-import { RESOLUTIONS } from './types';
+import { WallpaperGenerator } from '../src/generator';
+import { RESOLUTIONS } from '../src/types';
 
 const generator = new WallpaperGenerator();
 
