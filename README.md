@@ -265,9 +265,11 @@ vercel domains add your-domain.vercel.app
 
 ### Configuration Files
 
-- `vercel.json` - Vercel deployment configuration
+- `vercel.json` - Vercel deployment configuration with static file routing
 - `.vercelignore` - Files to exclude from deployment
 - `api/index.ts` - Serverless API functions for Vercel
+- `web/favicon.svg` - Website favicon
+- `web/output/` - Static wallpaper images served directly
 
 ### Environment-Specific Behavior
 

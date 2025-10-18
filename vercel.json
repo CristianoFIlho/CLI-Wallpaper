@@ -16,6 +16,14 @@
       "dest": "/api/index.ts"
     },
     {
+      "src": "/favicon.svg",
+      "dest": "/web/favicon.svg"
+    },
+    {
+      "src": "/output/(.*)",
+      "dest": "/web/output/$1"
+    },
+    {
       "src": "/",
       "dest": "/web/index.html"
     },
@@ -26,10 +34,6 @@
     {
       "src": "/app.js",
       "dest": "/web/app.js"
-    },
-    {
-      "src": "/output/(.*)",
-      "dest": "/output/$1"
     }
   ],
   "env": {
