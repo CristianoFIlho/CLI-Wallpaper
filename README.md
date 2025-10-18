@@ -51,6 +51,12 @@ A TypeScript-based tool that generates elegant wallpapers with CLI cheat sheets 
 <img src="output/npm/npm-1920x1080.png" alt="npm Commands Wallpaper" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
+## 🌐 Live Demo
+
+**Try it now:** [cliwallpaper.vercel.app](https://cliwallpaper.vercel.app)
+
+The web interface is live and ready to use! Generate beautiful CLI wallpapers instantly.
+
 ## 🚀 Quick Start
 
 ### 1. Installation
@@ -230,6 +236,37 @@ The web server provides the following REST API endpoints:
 3. 📝 Add CLI tool data or improvements
 4. ✅ Test your changes
 5. 📤 Submit a pull request
+
+## 🚀 Deployment
+
+This project is deployed on Vercel and available at [cliwallpaper.vercel.app](https://cliwallpaper.vercel.app).
+
+### Deploy to Vercel
+
+1. **Install Vercel CLI:**
+```bash
+npm install -g vercel
+```
+
+2. **Login to Vercel:**
+```bash
+vercel login
+```
+
+3. **Deploy:**
+```bash
+vercel --prod --yes
+```
+
+4. **Add custom domain (optional):**
+```bash
+vercel domains add your-domain.vercel.app
+```
+
+### Configuration Files
+
+- `vercel.json` - Vercel deployment configuration
+- `.vercelignore` - Files to exclude from deployment
 
 ## 📄 License
 
