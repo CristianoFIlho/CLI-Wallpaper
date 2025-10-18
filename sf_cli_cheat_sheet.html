@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF CLI Cheat Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #00ff00;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 3px;
+        }
+
+        .command {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .command-name {
+            color: #00ff00;
+            font-weight: bold;
+            min-width: 200px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .command-desc {
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .flag {
+            color: #ffff00;
+            font-weight: bold;
+            min-width: 120px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .flag-desc {
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 11px;
+            }
+
+            .command-name,
+            .flag {
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Salesforce SF CLI Commands</div>
+
+    <div class="container">
+        <div class="column">
+            <div class="section">
+                <div class="section-title">Org Management</div>
+                <div class="command">
+                    <div class="command-name">sf org login web</div>
+                    <div class="command-desc">Connect to org via browser</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org list</div>
+                    <div class="command-desc">Display currently active orgs</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org display</div>
+                    <div class="command-desc">Show org details</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org logout</div>
+                    <div class="command-desc">Log out from org</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org list metadata</div>
+                    <div class="command-desc">List metadata in org</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org list metadata-types</div>
+                    <div class="command-desc">List available metadata types</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Project Commands</div>
+                <div class="command">
+                    <div class="command-name">sf project generate manifest</div>
+                    <div class="command-desc">Create package.xml</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project deploy start</div>
+                    <div class="command-desc">Deploy metadata to org</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project deploy validate</div>
+                    <div class="command-desc">Validate deployment</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project deploy preview</div>
+                    <div class="command-desc">Preview deployment changes</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project deploy quick</div>
+                    <div class="command-desc">Quick deploy validated changes</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project deploy report</div>
+                    <div class="command-desc">Check deploy status</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project deploy cancel</div>
+                    <div class="command-desc">Cancel deployment</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf project retrieve start</div>
+                    <div class="command-desc">Retrieve metadata from org</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Data Operations</div>
+                <div class="command">
+                    <div class="command-name">sf data query</div>
+                    <div class="command-desc">Execute SOQL query</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf data import tree</div>
+                    <div class="command-desc">Import data from JSON</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf data export tree</div>
+                    <div class="command-desc">Export data to JSON</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf data delete record</div>
+                    <div class="command-desc">Delete records</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf data upsert bulk</div>
+                    <div class="command-desc">Bulk upsert records</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="section">
+                <div class="section-title">Apex Commands</div>
+                <div class="command">
+                    <div class="command-name">sf apex run</div>
+                    <div class="command-desc">Execute anonymous Apex</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf apex test run</div>
+                    <div class="command-desc">Run Apex tests</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf apex get test</div>
+                    <div class="command-desc">Get test results</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf apex get log</div>
+                    <div class="command-desc">Get debug logs</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf apex list log</div>
+                    <div class="command-desc">List debug logs</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Deployment Options</div>
+                <div class="command">
+                    <div class="flag">--source-dir</div>
+                    <div class="flag-desc">Deploy from directory</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--metadata</div>
+                    <div class="flag-desc">Deploy specific metadata type</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--manifest</div>
+                    <div class="flag-desc">Deploy from package.xml</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--target-org</div>
+                    <div class="flag-desc">Specify target org</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--test-level</div>
+                    <div class="flag-desc">Set test level</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--dry-run</div>
+                    <div class="flag-desc">Validate without deploying</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--ignore-conflicts</div>
+                    <div class="flag-desc">Ignore conflicts</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--ignore-warnings</div>
+                    <div class="flag-desc">Ignore warnings</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Common Flags</div>
+                <div class="command">
+                    <div class="flag">--json</div>
+                    <div class="flag-desc">Output as JSON</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--help</div>
+                    <div class="flag-desc">Display help</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--api-version</div>
+                    <div class="flag-desc">Specify API version</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--wait</div>
+                    <div class="flag-desc">Wait time in minutes</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--async</div>
+                    <div class="flag-desc">Run asynchronously</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--verbose</div>
+                    <div class="flag-desc">Verbose output</div>
+                </div>
+                <div class="command">
+                    <div class="flag">--concise</div>
+                    <div class="flag-desc">Show concise output</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="section">
+                <div class="section-title">Org Creation</div>
+                <div class="command">
+                    <div class="command-name">sf org create scratch</div>
+                    <div class="command-desc">Create scratch org</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org create sandbox</div>
+                    <div class="command-desc">Create sandbox org</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org delete scratch</div>
+                    <div class="command-desc">Delete scratch org</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf org open</div>
+                    <div class="command-desc">Open org in browser</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Package Commands</div>
+                <div class="command">
+                    <div class="command-name">sf package create</div>
+                    <div class="command-desc">Create package</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf package install</div>
+                    <div class="command-desc">Install package</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf package uninstall</div>
+                    <div class="command-desc">Uninstall package</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf package list</div>
+                    <div class="command-desc">List installed packages</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Utility Commands</div>
+                <div class="command">
+                    <div class="command-name">sf config list</div>
+                    <div class="command-desc">List configuration</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf config set</div>
+                    <div class="command-desc">Set configuration</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf plugins list</div>
+                    <div class="command-desc">List installed plugins</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf plugins install</div>
+                    <div class="command-desc">Install plugin</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf plugins uninstall</div>
+                    <div class="command-desc">Uninstall plugin</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Test Commands</div>
+                <div class="command">
+                    <div class="command-name">sf apex test run</div>
+                    <div class="command-desc">Run Apex tests</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf apex test report</div>
+                    <div class="command-desc">Get test report</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">sf apex test watch</div>
+                    <div class="command-desc">Watch test results</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
