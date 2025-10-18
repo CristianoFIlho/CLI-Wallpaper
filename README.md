@@ -267,6 +267,16 @@ vercel domains add your-domain.vercel.app
 
 - `vercel.json` - Vercel deployment configuration
 - `.vercelignore` - Files to exclude from deployment
+- `api/index.ts` - Serverless API functions for Vercel
+
+### Environment-Specific Behavior
+
+The application automatically detects the environment and adapts accordingly:
+
+- **Local Development**: Full Playwright functionality with real wallpaper generation
+- **Vercel Production**: Mock mode with API responses for demonstration
+
+This hybrid approach ensures the application works in both environments while providing clear feedback about available features.
 
 ## 📄 License
 
