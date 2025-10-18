@@ -1,0 +1,23 @@
+{
+  "name": "cli-wallpaper-generator",
+  "version": "1.0.0",
+  "description": "Generate CLI cheat sheet wallpapers in multiple resolutions",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && cp -r src/data dist/ && cp -r src/templates dist/",
+    "dev": "ts-node src/index.ts",
+    "generate": "npm run build && node dist/index.js",
+    "clean": "rm -rf dist output"
+  },
+  "keywords": ["cli", "wallpaper", "cheat-sheet", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

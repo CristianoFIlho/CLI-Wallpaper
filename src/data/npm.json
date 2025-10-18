@@ -1,0 +1,88 @@
+{
+  "title": "npm",
+  "sections": [
+    {
+      "title": "Package Installation",
+      "commands": [
+        { "name": "npm install", "description": "Install dependencies from package.json" },
+        { "name": "npm install <package>", "description": "Install package" },
+        { "name": "npm install -g <package>", "description": "Install package globally" },
+        { "name": "npm install --save <package>", "description": "Install and save to dependencies" },
+        { "name": "npm install --save-dev <package>", "description": "Install and save to devDependencies" },
+        { "name": "npm uninstall <package>", "description": "Remove package" },
+        { "name": "npm update", "description": "Update packages" }
+      ]
+    },
+    {
+      "title": "Scripts & Running",
+      "commands": [
+        { "name": "npm run <script>", "description": "Run script from package.json" },
+        { "name": "npm start", "description": "Run start script" },
+        { "name": "npm test", "description": "Run test script" },
+        { "name": "npm run build", "description": "Run build script" },
+        { "name": "npm run dev", "description": "Run development script" },
+        { "name": "npm run lint", "description": "Run linting script" }
+      ]
+    },
+    {
+      "title": "Package Management",
+      "commands": [
+        { "name": "npm init", "description": "Initialize new package" },
+        { "name": "npm init -y", "description": "Initialize with defaults" },
+        { "name": "npm publish", "description": "Publish package to registry" },
+        { "name": "npm unpublish <package>", "description": "Unpublish package" },
+        { "name": "npm version <version>", "description": "Update package version" },
+        { "name": "npm pack", "description": "Create package tarball" }
+      ]
+    },
+    {
+      "title": "Registry & Configuration",
+      "commands": [
+        { "name": "npm config list", "description": "List configuration" },
+        { "name": "npm config set <key> <value>", "description": "Set configuration" },
+        { "name": "npm config get <key>", "description": "Get configuration value" },
+        { "name": "npm config delete <key>", "description": "Delete configuration" },
+        { "name": "npm login", "description": "Login to registry" },
+        { "name": "npm logout", "description": "Logout from registry" }
+      ]
+    },
+    {
+      "title": "Cache & Cleanup",
+      "commands": [
+        { "name": "npm cache clean", "description": "Clean npm cache" },
+        { "name": "npm cache verify", "description": "Verify cache integrity" },
+        { "name": "npm prune", "description": "Remove extraneous packages" },
+        { "name": "npm audit", "description": "Audit packages for vulnerabilities" },
+        { "name": "npm audit fix", "description": "Fix vulnerabilities" }
+      ]
+    },
+    {
+      "title": "Information & Search",
+      "commands": [
+        { "name": "npm list", "description": "List installed packages" },
+        { "name": "npm list -g", "description": "List global packages" },
+        { "name": "npm list --depth=0", "description": "List top-level packages only" },
+        { "name": "npm search <term>", "description": "Search packages" },
+        { "name": "npm info <package>", "description": "Show package information" },
+        { "name": "npm view <package>", "description": "View package details" }
+      ]
+    },
+    {
+      "title": "Workspaces",
+      "commands": [
+        { "name": "npm install -ws", "description": "Install workspace dependencies" },
+        { "name": "npm run <script> -w <workspace>", "description": "Run script in workspace" },
+        { "name": "npm ls -ws", "description": "List workspace packages" },
+        { "name": "npm exec <command> -w <workspace>", "description": "Execute command in workspace" }
+      ]
+    },
+    {
+      "title": "CI/CD",
+      "commands": [
+        { "name": "npm ci", "description": "Clean install for CI" },
+        { "name": "npm run-script <script>", "description": "Run script (CI friendly)" },
+        { "name": "npm run <script> --if-present", "description": "Run script if it exists" }
+      ]
+    }
+  ]
+}

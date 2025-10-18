@@ -1,0 +1,82 @@
+{
+  "title": "Docker",
+  "sections": [
+    {
+      "title": "Container Management",
+      "commands": [
+        { "name": "docker run <image>", "description": "Run container from image" },
+        { "name": "docker run -d <image>", "description": "Run container in background" },
+        { "name": "docker run -p <host>:<container>", "description": "Map ports" },
+        { "name": "docker run -v <host>:<container>", "description": "Mount volume" },
+        { "name": "docker ps", "description": "List running containers" },
+        { "name": "docker ps -a", "description": "List all containers" },
+        { "name": "docker stop <container>", "description": "Stop container" },
+        { "name": "docker start <container>", "description": "Start container" },
+        { "name": "docker rm <container>", "description": "Remove container" }
+      ]
+    },
+    {
+      "title": "Image Management",
+      "commands": [
+        { "name": "docker images", "description": "List images" },
+        { "name": "docker pull <image>", "description": "Download image" },
+        { "name": "docker push <image>", "description": "Upload image" },
+        { "name": "docker build -t <name> .", "description": "Build image from Dockerfile" },
+        { "name": "docker rmi <image>", "description": "Remove image" },
+        { "name": "docker tag <image> <new-name>", "description": "Tag image" }
+      ]
+    },
+    {
+      "title": "Dockerfile Commands",
+      "commands": [
+        { "name": "FROM <image>", "description": "Base image" },
+        { "name": "RUN <command>", "description": "Execute command" },
+        { "name": "COPY <src> <dest>", "description": "Copy files" },
+        { "name": "ADD <src> <dest>", "description": "Copy files (with extraction)" },
+        { "name": "WORKDIR <path>", "description": "Set working directory" },
+        { "name": "EXPOSE <port>", "description": "Expose port" },
+        { "name": "CMD [\"command\"]", "description": "Default command" },
+        { "name": "ENTRYPOINT [\"command\"]", "description": "Entry point" }
+      ]
+    },
+    {
+      "title": "Docker Compose",
+      "commands": [
+        { "name": "docker-compose up", "description": "Start services" },
+        { "name": "docker-compose up -d", "description": "Start services in background" },
+        { "name": "docker-compose down", "description": "Stop services" },
+        { "name": "docker-compose build", "description": "Build services" },
+        { "name": "docker-compose logs", "description": "View logs" },
+        { "name": "docker-compose ps", "description": "List services" }
+      ]
+    },
+    {
+      "title": "Networking",
+      "commands": [
+        { "name": "docker network ls", "description": "List networks" },
+        { "name": "docker network create <name>", "description": "Create network" },
+        { "name": "docker network connect <net> <container>", "description": "Connect container to network" },
+        { "name": "docker network disconnect <net> <container>", "description": "Disconnect container" }
+      ]
+    },
+    {
+      "title": "Volumes",
+      "commands": [
+        { "name": "docker volume ls", "description": "List volumes" },
+        { "name": "docker volume create <name>", "description": "Create volume" },
+        { "name": "docker volume rm <name>", "description": "Remove volume" },
+        { "name": "docker volume inspect <name>", "description": "Inspect volume" }
+      ]
+    },
+    {
+      "title": "Debugging",
+      "commands": [
+        { "name": "docker logs <container>", "description": "View container logs" },
+        { "name": "docker exec -it <container> <command>", "description": "Execute command in container" },
+        { "name": "docker exec -it <container> /bin/bash", "description": "Open shell in container" },
+        { "name": "docker inspect <container>", "description": "Inspect container" },
+        { "name": "docker stats", "description": "Show container stats" }
+      ]
+    }
+  ]
+}

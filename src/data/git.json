@@ -1,0 +1,76 @@
+{
+  "title": "Git",
+  "sections": [
+    {
+      "title": "Repository Management",
+      "commands": [
+        { "name": "git init", "description": "Initialize new repository" },
+        { "name": "git clone <url>", "description": "Clone repository" },
+        { "name": "git remote add <name> <url>", "description": "Add remote repository" },
+        { "name": "git remote -v", "description": "List remote repositories" },
+        { "name": "git remote remove <name>", "description": "Remove remote repository" }
+      ]
+    },
+    {
+      "title": "Basic Commands",
+      "commands": [
+        { "name": "git add <file>", "description": "Stage file for commit" },
+        { "name": "git add .", "description": "Stage all changes" },
+        { "name": "git commit -m \"message\"", "description": "Commit staged changes" },
+        { "name": "git status", "description": "Show repository status" },
+        { "name": "git log", "description": "Show commit history" },
+        { "name": "git diff", "description": "Show changes" }
+      ]
+    },
+    {
+      "title": "Branching",
+      "commands": [
+        { "name": "git branch", "description": "List branches" },
+        { "name": "git branch <name>", "description": "Create new branch" },
+        { "name": "git checkout <branch>", "description": "Switch to branch" },
+        { "name": "git checkout -b <name>", "description": "Create and switch to branch" },
+        { "name": "git merge <branch>", "description": "Merge branch" },
+        { "name": "git branch -d <name>", "description": "Delete branch" }
+      ]
+    },
+    {
+      "title": "Remote Operations",
+      "commands": [
+        { "name": "git push", "description": "Push to remote" },
+        { "name": "git push origin <branch>", "description": "Push branch to origin" },
+        { "name": "git pull", "description": "Pull from remote" },
+        { "name": "git fetch", "description": "Fetch from remote" },
+        { "name": "git push -u origin <branch>", "description": "Push and set upstream" }
+      ]
+    },
+    {
+      "title": "Undoing Changes",
+      "commands": [
+        { "name": "git reset <file>", "description": "Unstage file" },
+        { "name": "git reset --hard", "description": "Reset all changes" },
+        { "name": "git revert <commit>", "description": "Revert commit" },
+        { "name": "git checkout -- <file>", "description": "Discard file changes" },
+        { "name": "git clean -fd", "description": "Remove untracked files" }
+      ]
+    },
+    {
+      "title": "Stashing",
+      "commands": [
+        { "name": "git stash", "description": "Stash changes" },
+        { "name": "git stash pop", "description": "Apply and remove stash" },
+        { "name": "git stash list", "description": "List stashes" },
+        { "name": "git stash apply", "description": "Apply stash" },
+        { "name": "git stash drop", "description": "Delete stash" }
+      ]
+    },
+    {
+      "title": "Configuration",
+      "commands": [
+        { "name": "git config --global user.name", "description": "Set global username" },
+        { "name": "git config --global user.email", "description": "Set global email" },
+        { "name": "git config --list", "description": "List configuration" },
+        { "name": "git config --global core.editor", "description": "Set default editor" }
+      ]
+    }
+  ]
+}

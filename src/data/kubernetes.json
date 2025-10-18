@@ -1,0 +1,83 @@
+{
+  "title": "Kubernetes",
+  "sections": [
+    {
+      "title": "Basic Commands",
+      "commands": [
+        { "name": "kubectl get pods", "description": "List pods" },
+        { "name": "kubectl get services", "description": "List services" },
+        { "name": "kubectl get deployments", "description": "List deployments" },
+        { "name": "kubectl get nodes", "description": "List nodes" },
+        { "name": "kubectl get all", "description": "List all resources" },
+        { "name": "kubectl describe <resource> <name>", "description": "Describe resource" }
+      ]
+    },
+    {
+      "title": "Pod Management",
+      "commands": [
+        { "name": "kubectl run <name> --image=<image>", "description": "Run pod" },
+        { "name": "kubectl delete pod <name>", "description": "Delete pod" },
+        { "name": "kubectl logs <pod>", "description": "View pod logs" },
+        { "name": "kubectl exec -it <pod> -- /bin/bash", "description": "Execute shell in pod" },
+        { "name": "kubectl port-forward <pod> <local>:<remote>", "description": "Port forward" }
+      ]
+    },
+    {
+      "title": "Deployment Management",
+      "commands": [
+        { "name": "kubectl create deployment <name> --image=<image>", "description": "Create deployment" },
+        { "name": "kubectl scale deployment <name> --replicas=<n>", "description": "Scale deployment" },
+        { "name": "kubectl rollout status deployment/<name>", "description": "Check rollout status" },
+        { "name": "kubectl rollout undo deployment/<name>", "description": "Rollback deployment" },
+        { "name": "kubectl delete deployment <name>", "description": "Delete deployment" }
+      ]
+    },
+    {
+      "title": "Service Management",
+      "commands": [
+        { "name": "kubectl expose deployment <name> --port=<port>", "description": "Expose deployment" },
+        { "name": "kubectl create service <type> <name> --tcp=<port>", "description": "Create service" },
+        { "name": "kubectl delete service <name>", "description": "Delete service" },
+        { "name": "kubectl get endpoints", "description": "List endpoints" }
+      ]
+    },
+    {
+      "title": "Configuration",
+      "commands": [
+        { "name": "kubectl apply -f <file>", "description": "Apply configuration" },
+        { "name": "kubectl create -f <file>", "description": "Create from file" },
+        { "name": "kubectl delete -f <file>", "description": "Delete from file" },
+        { "name": "kubectl get <resource> -o yaml", "description": "Get YAML output" },
+        { "name": "kubectl edit <resource> <name>", "description": "Edit resource" }
+      ]
+    },
+    {
+      "title": "Namespace Management",
+      "commands": [
+        { "name": "kubectl get namespaces", "description": "List namespaces" },
+        { "name": "kubectl create namespace <name>", "description": "Create namespace" },
+        { "name": "kubectl delete namespace <name>", "description": "Delete namespace" },
+        { "name": "kubectl config set-context --current --namespace=<name>", "description": "Set namespace" }
+      ]
+    },
+    {
+      "title": "Context & Config",
+      "commands": [
+        { "name": "kubectl config get-contexts", "description": "List contexts" },
+        { "name": "kubectl config use-context <name>", "description": "Switch context" },
+        { "name": "kubectl config current-context", "description": "Current context" },
+        { "name": "kubectl config view", "description": "View configuration" },
+        { "name": "kubectl cluster-info", "description": "Cluster information" }
+      ]
+    },
+    {
+      "title": "Debugging",
+      "commands": [
+        { "name": "kubectl top pods", "description": "Resource usage of pods" },
+        { "name": "kubectl top nodes", "description": "Resource usage of nodes" },
+        { "name": "kubectl events", "description": "List events" },
+        { "name": "kubectl get events --sort-by=.metadata.creationTimestamp", "description": "Events sorted by time" }
+      ]
+    }
+  ]
+}
