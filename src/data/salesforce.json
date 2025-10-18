@@ -1,0 +1,77 @@
+{
+  "title": "Salesforce",
+  "sections": [
+    {
+      "title": "Org Management",
+      "commands": [
+        { "name": "sf org login web", "description": "Connect to org via browser" },
+        { "name": "sf org list", "description": "Display currently active orgs" },
+        { "name": "sf org display", "description": "Show org details" },
+        { "name": "sf org logout", "description": "Log out from org" },
+        { "name": "sf org list metadata", "description": "List metadata in org" },
+        { "name": "sf org list metadata-types", "description": "List available metadata types" }
+      ]
+    },
+    {
+      "title": "Project Commands",
+      "commands": [
+        { "name": "sf project generate manifest", "description": "Create package.xml" },
+        { "name": "sf project deploy start", "description": "Deploy metadata to org" },
+        { "name": "sf project deploy validate", "description": "Validate deployment" },
+        { "name": "sf project deploy preview", "description": "Preview deployment changes" },
+        { "name": "sf project deploy quick", "description": "Quick deploy validated changes" },
+        { "name": "sf project deploy report", "description": "Check deploy status" },
+        { "name": "sf project deploy cancel", "description": "Cancel deployment" },
+        { "name": "sf project retrieve start", "description": "Retrieve metadata from org" }
+      ]
+    },
+    {
+      "title": "Data Operations",
+      "commands": [
+        { "name": "sf data query", "description": "Execute SOQL query" },
+        { "name": "sf data import tree", "description": "Import data from JSON" },
+        { "name": "sf data export tree", "description": "Export data to JSON" },
+        { "name": "sf data delete record", "description": "Delete records" },
+        { "name": "sf data upsert bulk", "description": "Bulk upsert records" }
+      ]
+    },
+    {
+      "title": "Apex Commands",
+      "commands": [
+        { "name": "sf apex run", "description": "Execute anonymous Apex" },
+        { "name": "sf apex test run", "description": "Run Apex tests" },
+        { "name": "sf apex get test", "description": "Get test results" },
+        { "name": "sf apex get log", "description": "Get debug logs" },
+        { "name": "sf apex list log", "description": "List debug logs" }
+      ]
+    },
+    {
+      "title": "Org Creation",
+      "commands": [
+        { "name": "sf org create scratch", "description": "Create scratch org" },
+        { "name": "sf org create sandbox", "description": "Create sandbox org" },
+        { "name": "sf org delete scratch", "description": "Delete scratch org" },
+        { "name": "sf org open", "description": "Open org in browser" }
+      ]
+    },
+    {
+      "title": "Package Commands",
+      "commands": [
+        { "name": "sf package create", "description": "Create package" },
+        { "name": "sf package install", "description": "Install package" },
+        { "name": "sf package uninstall", "description": "Uninstall package" },
+        { "name": "sf package list", "description": "List installed packages" }
+      ]
+    },
+    {
+      "title": "Utility Commands",
+      "commands": [
+        { "name": "sf config list", "description": "List configuration" },
+        { "name": "sf config set", "description": "Set configuration" },
+        { "name": "sf plugins list", "description": "List installed plugins" },
+        { "name": "sf plugins install", "description": "Install plugin" },
+        { "name": "sf plugins uninstall", "description": "Uninstall plugin" }
+      ]
+    }
+  ]
+}

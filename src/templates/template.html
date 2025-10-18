@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} CLI Cheat Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            padding: 20px;
+        }
+
+        /* Resolution-specific scaling */
+        body[data-resolution="1920x1080"] {
+            font-size: 12px;
+            padding: 20px;
+        }
+
+        body[data-resolution="2560x1440"] {
+            font-size: 16px;
+            padding: 27px;
+        }
+
+        body[data-resolution="3840x2160"] {
+            font-size: 24px;
+            padding: 40px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #00ff00;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 3px;
+        }
+
+        .command {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .command-name {
+            color: #00ff00;
+            font-weight: bold;
+            min-width: 200px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .command-desc {
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .flag {
+            color: #ffff00;
+            font-weight: bold;
+            min-width: 120px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .flag-desc {
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Resolution-specific scaling for other elements */
+        body[data-resolution="2560x1440"] .container {
+            gap: 40px;
+            max-width: 1867px;
+        }
+
+        body[data-resolution="2560x1440"] .column {
+            min-width: 400px;
+        }
+
+        body[data-resolution="2560x1440"] .section {
+            margin-bottom: 33px;
+        }
+
+        body[data-resolution="2560x1440"] .section-title {
+            font-size: 19px;
+            margin-bottom: 13px;
+            padding-bottom: 4px;
+        }
+
+        body[data-resolution="2560x1440"] .command {
+            margin-bottom: 11px;
+        }
+
+        body[data-resolution="2560x1440"] .command-name {
+            min-width: 267px;
+            margin-right: 20px;
+        }
+
+        body[data-resolution="2560x1440"] .flag {
+            min-width: 160px;
+            margin-right: 20px;
+        }
+
+        body[data-resolution="2560x1440"] .header {
+            margin-bottom: 40px;
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+
+        body[data-resolution="3840x2160"] .container {
+            gap: 60px;
+            max-width: 2800px;
+        }
+
+        body[data-resolution="3840x2160"] .column {
+            min-width: 600px;
+        }
+
+        body[data-resolution="3840x2160"] .section {
+            margin-bottom: 50px;
+        }
+
+        body[data-resolution="3840x2160"] .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 6px;
+        }
+
+        body[data-resolution="3840x2160"] .command {
+            margin-bottom: 16px;
+        }
+
+        body[data-resolution="3840x2160"] .command-name {
+            min-width: 400px;
+            margin-right: 30px;
+        }
+
+        body[data-resolution="3840x2160"] .flag {
+            min-width: 240px;
+            margin-right: 30px;
+        }
+
+        body[data-resolution="3840x2160"] .header {
+            margin-bottom: 60px;
+            font-size: 36px;
+            letter-spacing: 4px;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 11px;
+            }
+
+            .command-name,
+            .flag {
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body data-resolution="{{RESOLUTION}}">
+    <div class="header">{{TITLE}} CLI Commands</div>
+
+    <div class="container">
+        {{SECTIONS}}
+    </div>
+</body>
+
+</html>
