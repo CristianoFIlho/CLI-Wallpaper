@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import puppeteer from 'puppeteer';
+import { chromium } from 'playwright';
 import { CLIData, Resolution, RESOLUTIONS } from './types';
 
 export class WallpaperGenerator {
@@ -47,12 +47,13 @@ export class WallpaperGenerator {
   /**
    * Generate HTML content from template and data
    */
-  private generateHTML(data: CLIData): string {
+  private generateHTML(data: CLIData, resolution: Resolution): string {
     const template = fs.readFileSync(this.templatePath, 'utf8');
     const sections = this.generateSections(data);
     
     return template
       .replace('{{TITLE}}', data.title)
+      .replace('{{RESOLUTION}}', resolution.name)
       .replace('{{SECTIONS}}', sections);
   }
 
@@ -70,20 +71,18 @@ export class WallpaperGenerator {
    * Generate screenshot for specific resolution
    */
   private async generateScreenshot(html: string, resolution: Resolution, cliName: string): Promise<void> {
-    const browser = await puppeteer.launch({
-      headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    const browser = await chromium.launch({
+      headless: true
     });
 
     try {
       const page = await browser.newPage();
-      await page.setViewport({
+      await page.setViewportSize({
         width: resolution.width,
-        height: resolution.height,
-        deviceScaleFactor: 1
+        height: resolution.height
       });
 
-      await page.setContent(html, { waitUntil: 'networkidle0' });
+      await page.setContent(html, { waitUntil: 'networkidle' });
 
       const outputDir = path.join(this.outputPath, cliName);
       const filename = `${cliName}-${resolution.name}.png`;
@@ -109,12 +108,11 @@ export class WallpaperGenerator {
     
     try {
       const data = this.loadCLIData(cliName);
-      const html = this.generateHTML(data);
-      
       this.ensureOutputDir(cliName);
 
       // Generate screenshots for all resolutions
       for (const resolution of RESOLUTIONS) {
+        const html = this.generateHTML(data, resolution);
         await this.generateScreenshot(html, resolution, cliName);
       }
 
